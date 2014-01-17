@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140117005100) do
+ActiveRecord::Schema.define(version: 20140117053327) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,10 @@ ActiveRecord::Schema.define(version: 20140117005100) do
   create_table "allergens", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
+
+  add_index "allergens", ["name"], name: "index_allergens_on_name", using: :btree
 
   create_table "allergens_foods", force: true do |t|
     t.integer  "allergen_id"
@@ -31,6 +34,9 @@ ActiveRecord::Schema.define(version: 20140117005100) do
   create_table "foods", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
+
+  add_index "foods", ["name"], name: "index_foods_on_name", using: :btree
 
 end

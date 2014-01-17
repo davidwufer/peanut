@@ -34,11 +34,10 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
-  gem 'pry-rails'
-end
-
-group :test do
   gem 'factory_girl_rails'
+
+  gem 'pry-rails'
+  gem 'pry-debugger'
 end
 
 # Use ActiveModel has_secure_password
