@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Allergen do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "associations" do
+    it "has many ingredients" do
+
+    end
+  end
 end
