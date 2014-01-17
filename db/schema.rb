@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20140117005100) do
   end
 
   create_table "allergens_foods", force: true do |t|
+    t.integer  "allergen_id"
+    t.integer  "food_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
