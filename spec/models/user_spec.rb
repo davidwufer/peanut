@@ -7,6 +7,6 @@ describe User do
 
     user.allergens << allergen
 
-    user.allergens.should include(allergen)
+    expect(user.allergens).to include(allergen)
   end
 end
