@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :allergens
+
+  # attr_accessible :name, :first_name, :last_name, :email
+
 end
