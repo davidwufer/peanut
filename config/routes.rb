@@ -2,6 +2,20 @@ Peanut::Application.routes.draw do
   devise_for :users
   root :to => "home#index"
 
+  namespace :api do
+    namespace :v1 do
+      resources :users
+    end
+
+    # In case V2 ever gets added, do this
+    # namespace :v2 do
+    #   resources :users
+    # end
+
+    # match 'v:api/*path', :to => redirect("/api/v1/%{path}")
+    # match '*path', :to => redirect("/api/v1/%{path}")
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
