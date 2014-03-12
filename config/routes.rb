@@ -1,6 +1,8 @@
 Peanut::Application.routes.draw do
   devise_for :users
-  root :to => "welcome#index"
+  root :to => "home#index"
+
+  get "/welcome" => 'welcome#index', as: :welcome
 
   # get 'users/:username', to: 'users#show'
 
